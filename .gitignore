@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Secrets
+.env
+
+# Data caches (re-downloadable)
+data/cache/
+
+# Model weights (too large for git)
+models/
+
+# Generated outputs (regenerate with scripts)
+outputs/
+
+# IDE
+.idea/
+.vscode/
+*.swp

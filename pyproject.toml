@@ -1,0 +1,33 @@
+[project]
+name = "market-lens"
+version = "0.1.0"
+description = "Stock-market teaching chatbot - explains price moves with grounded sources"
+readme = "README.md"
+authors = [
+    { name = "MaruthiMourya", email = "maruthiperam10@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "fastapi>=0.165.0",
+    "openai>=3.57.0",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.3.0",
+    "uvicorn>=0.54.0",
+    "yfinance>=0.2.0",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+market-lens = "market_lens:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
