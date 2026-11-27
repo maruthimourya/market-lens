@@ -47,7 +47,7 @@ def explain(
     Returns (explanation_text, hits) so the caller can show the answer AND the
     sources it was grounded in - the citation trail is the whole point.
     """
-    hits = index.search(question, k=k)
+    hits = index.search_mmr(question, k=k)  # rerank: drop duplicate sources
 
     # Paste each retrieved chunk in, labelled with its article title.
     context = "\n\n".join(f"[{chunk.title}]\n{chunk.text}" for chunk, _ in hits)
